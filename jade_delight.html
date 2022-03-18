@@ -8,6 +8,17 @@
 .userInfoaddress{
     display: none;
 }
+.userInfoaddress > label { display:inline-block; width:110px; vertical-align:top; }
+.userInfoaddress > input { display: inline-block; }
+.userInfo > label { display:inline-block; width:110px; vertical-align:top; }
+.userInfo > input { display: inline-block; }
+[class*="subtotal totalSection"] > label { display:inline-block; width: 110px; vertical-align:top; }
+[class*="subtotal totalSection"] > input { display: inline-block; }
+[class*="total totalSection"] > label { display:inline-block; width: 110px; vertical-align:top; }
+[class*="total totalSection"] > input { display: inline-block; }
+[class*="tax totalSection"] > label { display:inline-block; width: 110px; vertical-align:top; }
+[class*="tax totalSection"] > input { display: inline-block; }
+
 ul {
     list-style-type: none;
 }
@@ -185,10 +196,10 @@ $('input[type = "button"][value = "Submit Order"]').click(function(){
 <form>
 
 <p class="userInfo"><label>First Name:</label> <input type="text"  name='fname' /></p>
-<p class="userInfo"><label>Last Name*</label>:  <input type="text" name='lname' /></p>
-<p class="userInfoaddress"><label>Street*</label>: <input type="text" name='street' /></p>
-<p class="userInfoaddress"><label>City*</label>: <input type="text" name='city' /></p>
-<p class="userInfo"><label>Phone*</label>: <input type="text" name='phone' /></p>
+<p class="userInfo"><label>Last Name*:</label>  <input type="text" name='lname' /></p>
+<p class="userInfoaddress"><label>Street*:</label> <input type="text" name='street' /></p>
+<p class="userInfoaddress"><label>City*:</label> <input type="text" name='city' /></p>
+<p class="userInfo"><label>Phone*:</label> <input type="text" name='phone' /></p>
 <p> 
 	<input type="radio"  name="p_or_d" value = "pickup" checked="checked"/>Pickup  
 	<input type="radio"  name='p_or_d' value = 'delivery'/>
@@ -216,7 +227,7 @@ $('input[type = "button"][value = "Submit Order"]').click(function(){
   document.writeln(s);
 </script>
 </table>
-<p class="subtotal totalSection"><label>Subtotal</label>: 
+<p class="subtotal totalSection"><label>Subtotal:</label> 
    $ <input type="text"  name='subtotal' id="subtotal" />
 </p>
 <p class="tax totalSection"><label>Mass tax 6.25%:</label>
